@@ -66,7 +66,7 @@ export class Looker {
       clientSecret: options.clientSecret,
     })
   }
-
+/// [demo]
   public refreshCommands() {
     if (!this.customCommandSpaceId) {
       console.log(`No commands specified for ${this.url}...`)
@@ -84,7 +84,7 @@ export class Looker {
     },
     console.log)
   }
-
+/// [demo]
   private addCommandsForSpace(space: ISpace, category: string) {
     space.dashboards.forEach((partialDashboard) =>
       this.client.get(`dashboards/${partialDashboard.id}`, (dashboard: IDashboard) => {
